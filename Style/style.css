@@ -11,6 +11,8 @@
   body{
     max-width: 1330px;
     margin: 0px auto;
+    overflow-x: hidden;
+    height: fit-content;
     
   }
   section{
@@ -268,31 +270,188 @@ text-align: center;
 .stories{
    
     background: url(../assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
-
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:4rem;
 }
 .boxes{
+    margin-top: 25px;
     display: grid;
     grid-template-areas: 
     "n1 n2 n3"
     "n1 n4 n5";
-    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
 
 }
 .box1{
+  
+   display: flex;
+   flex-direction: column;
+   gap:0px;
+   
+   width: 25vw;
     grid-area: n1;
 }
 .box2{
+    display: flex;
+   flex-direction: column;
+   gap:0px;
+   
+   width:17vw;
     grid-area: n2;
 }
 .box3{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    
+    width:17vw;
     grid-area: n3;
 }
 .box4{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    
+    width:17vw;
     grid-area: n4;
 }
 .box5{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    
+    width:17vw;
     grid-area: n5;
 }
+.con1{
+    height: 50%;
+    border-radius:0px 0px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    background-color: white;
+}
+.box1 img{
+    border-radius: 16px 16px 0px 0px;
+    
+}
+.con2{
+ 
+    border-radius:0px 0px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    background-color: white;
+}
+.box2 img{
+    border-radius: 16px 16px 0px 0px;
+    
+}
+.con3{
+    
+    border-radius:0px 0px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    background-color: white;
+}
+.box3 img{
+    border-radius: 16px 16px 0px 0px;
+    
+}
+.con4{
+    
+    border-radius:0px 0px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    background-color: white;
+}
+.box4 img{
+    border-radius: 16px 16px 0px 0px;
+    
+}
+.con5{
+   
+    border-radius:0px 0px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    background-color: white;
+}
+.box5 img{
+    border-radius: 16px 16px 0px 0px;
+    
+}
+.btnn1{
+    position: relative;
+
+   top: -10%;
+   left: 10%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    padding: .7rem;
+    width: 50%;
+    border-radius: 3.5rem;
+    border: none;
+    color: white;
+    background: rgb(254, 163, 1);
+    cursor: pointer;
+    }
+.btnn2{
+    position: relative;
+
+   top: -25%;
+   left: 25%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    padding: .7rem;
+    width: 50%;
+    border-radius: 3.5rem;
+    border: none;
+    color: white;
+    background: rgb(149, 178, 38);
+    cursor: pointer;
+    }
+.btnn3{
+    position: relative;
+
+   top: -25%;
+   left: 20%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    padding: .7rem;
+    width: 50%;
+    border-radius: 3.5rem;
+    border: none;
+    color: white;
+    background: rgb(93, 88, 240);
+    cursor: pointer;
+    }
+    
 /* utility */
 .title{
     color: rgb(0, 0, 0);
@@ -303,6 +462,15 @@ line-height: 4rem;
 
 text-align: center;
 }
+.title-1{
+    color: rgb(0, 0, 0);
+
+font-size: 1rem;
+font-weight: 700;
+line-height: 1.7rem;
+
+text-align: left;
+}
 .title-des{
     color: rgb(128, 128, 128);
 font-family: Raleway;
@@ -311,8 +479,16 @@ font-weight: 500;
 
 
 }
+.title-des1{
+    color: rgb(128, 128, 128);
+font-family: Raleway;
+font-size: 12px;
+font-weight: 500;
+
+
+}
 @media screen and (max-width:576px) {
-    header ul, .n1 h1, #b-1,.buttons{
+    header ul, .n1 h1, #b-1,.buttons, .box1{
         display: none;
     }
     /* standard */
@@ -343,13 +519,24 @@ font-weight: 500;
     #hambarg, .orange-line{
        display: block;
     }
-
+    .boxes{
+        grid-template-areas: 
+        "n2 n3"
+        "n4 n5";
+        grid-template-columns: repeat(2,1fr);
+    }
+.box2,.box3, .box4,.box5{
+ 
+width: 173.09px;
+height: 300.59px;
+}
 }
 
-@media screen and (min-width:577px) and (max-width:992px) {
+@media screen and (min-width:577px) and (max-width:1111px) {
     header ul, .n1 h1, #b-1{
         display: none;
     }
+   
     #hambarg, .orange-line{
         display: block;
      }
