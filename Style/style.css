@@ -15,6 +15,28 @@
     height: fit-content;
     
   }
+  .marquee-container {
+    background-color: #0056b3;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  .marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrolls 10s linear infinite;
+  }
+  
+  @keyframes scrolls {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
   section{
     padding: 2.5rem 0px;
   }
@@ -451,7 +473,61 @@ text-align: center;
     background: rgb(93, 88, 240);
     cursor: pointer;
     }
-    
+    /* footer */
+    footer{
+        padding-top: 25px;
+        background: rgb(1, 172, 253);
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 20px 0px 20px 0px;
+        color: white;
+
+    }
+    .sec ul{
+        margin-top: 19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    footer ul li {
+        list-style: none;
+       
+        }
+         footer  a{
+            text-decoration: none;
+            color: white;
+        }
+        .part1{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .5rem;
+        }
+        .first{
+            width: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            
+            gap: 1.5rem;
+        }
+        .third{
+            display: flex;
+            flex-direction: column;
+
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
 /* utility */
 .title{
     color: rgb(0, 0, 0);
@@ -530,6 +606,14 @@ font-weight: 500;
 width: 173.09px;
 height: 300.59px;
 }
+footer{
+    flex-direction: column;
+   align-items: flex-start;padding-left: 30px;
+   gap:1rem
+}
+footer .first{
+    width: 80%;
+}
 }
 
 @media screen and (min-width:577px) and (max-width:1111px) {
@@ -543,5 +627,13 @@ height: 300.59px;
      .content, .image-1{
         margin: 0px;
      }
+     footer{
+        flex-direction: column;
+       align-items: flex-start;padding-left: 30px;
+       gap:1rem
+    }
+    footer .first{
+        width: 80%;
+    }
  
 }
